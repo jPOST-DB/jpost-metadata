@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  virtuoso:
+    image: tenforce/virtuoso:virtuoso7.2.5
+    container_name: jpost-metadata-virtuoso
+    ports:
+      - 127.0.0.1:8890:8890
+    volumes:
+      - ./db:/data
+
+  stanza:
+    image: node:18.19.1
+    container_name: jpost-metadata-stanza
+    working_dir: /src
+    volumes:
+      - ./src/stanza:/src
+    ports:
+      - 127.0.0.1:8080:8080
+    tty: true

@@ -1,0 +1,34 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX dct: <http://purl.org/dc/terms/> 
+PREFIX uniprot: <http://purl.uniprot.org/uniprot/> 
+PREFIX isoforms: <http://purl.uniprot.org/isoforms/> 
+PREFIX idup: <http://identifiers.org/uniprot/>
+PREFIX taxonomy: <http://identifiers.org/taxonomy/> 
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX ncit: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> 
+PREFIX unimod: <http://www.unimod.org/obo/unimod.obo#> 
+PREFIX sio: <http://semanticscience.org/resource/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX faldo: <http://biohackathon.org/resource/faldo#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX px: <https://github.com/PX-RDF/ontology/blob/master/px.owl#> 
+PREFIX pxd: <http://proteomecentral.proteomexchange.org/dataset/> 
+PREFIX jpost: <http://rdf.jpostdb.org/ontology/jpost.owl#> 
+PREFIX jrepo: <https://repository.jpostdb.org/entry/> 
+PREFIX bid: <http://rdf.jpostdb.org/bid/> 
+PREFIX vcard: <http://www.w3.org/2006/vcard/ns#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX : <http://rdf.jpostdb.org/entry/> 
+
+SELECT ?id ?label?psmCount ?pepCount ?gtdb ?ncbi ?superkingdom ?phylum WHERE {
+    ?taxon a jpost:Taxonomy ;
+        rdfs:label ?label ;
+        dct:identifier ?id ;
+        jpost:psmCount ?psmCount ;
+        jpost:pepCount ?pepCount ;
+        jpost:gtd/rdfs:label ?gtdb ;
+        jpost:taxonomy/rdfs:label ?ncbi ;
+        jpost:gtd/jpost:superkingdom ?superkingdom ;
+        jpost:gtd/jpost:phylum ?phylum .
+}

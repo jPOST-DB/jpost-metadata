@@ -1,0 +1,45 @@
+<div>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <div style="width: 100%; overflow-x: auto;">
+    <table>
+      <tr>
+        <th>id</th>
+        <th>label</th>
+        <th>psmCount</th>
+        <th>pepCount</th>
+        <th>gtdb</th>
+        <th>ncbi</th>
+        <th>superkingdom</th>
+        <th>phylum</th>
+      </tr>
+{{#each rows}}
+        <tr>
+            <td>{{id.value}}</td>
+            <td>{{label.value}}</td>
+            <td>{{psmCount.value}}</td>
+            <td>{{pepCount.value}}</td>
+            <td>{{gtdb.value}}</td>
+            <td>{{ncbi.value}}</td>
+            <td>{{superkingdom}}</td>
+            <td>{{phylum.value}}</td>
+        </tr>
+{{/each}}        
+    </table>
+    </div>    
+</div>

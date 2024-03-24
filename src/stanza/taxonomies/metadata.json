@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "stanza": "http://togostanza.org/resource/stanza#"
+  },
+  "@id": "taxonomies",
+  "stanza:label": "Taxonomies",
+  "stanza:definition": "Taxonomies.",
+  "stanza:parameter": [
+  ],
+  "stanza:usage": "<togostanza-taxonomies></togostanza-taxonomies>",
+  "stanza:type": "Stanza",
+  "stanza:context": "",
+  "stanza:display": "",
+  "stanza:provider": "provider of this stanza",
+  "stanza:license": "",
+  "stanza:author": "author name",
+  "stanza:address": "name@example.org",
+  "stanza:contributor": [
+  ],
+  "stanza:created": "2024-03-23",
+  "stanza:updated": "2024-03-23"
+}
